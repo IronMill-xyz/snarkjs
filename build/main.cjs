@@ -50,7 +50,7 @@ const bn128q = ffjavascript.Scalar.e("218882428718392752222464057452572750886963
 async function getCurveFromR(r) {
     let curve;
     if (ffjavascript.Scalar.eq(r, bn128r$1)) {
-        curve = await ffjavascript.buildBn128();
+        curve = await ffjavascript.buildBn128(true);
     } else if (ffjavascript.Scalar.eq(r, bls12381r$1)) {
         curve = await ffjavascript.buildBls12381();
     } else {
